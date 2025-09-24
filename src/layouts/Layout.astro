@@ -1,14 +1,31 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro'
+import 'aos/dist/aos.css';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/icon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Zentrix Innovate</title>
 	</head>
 	<body>
+		<Navbar />
+
 		<slot />
+
+		<script>
+			import AOS from "aos";
+			AOS.init({
+			  duration: 800,
+			  easing: 'ease-in-out',
+			  once: false,
+			});
+		  </script>
 	</body>
 </html>
 

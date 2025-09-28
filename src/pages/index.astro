@@ -18,9 +18,9 @@ import Layout from "../layouts/Layout.astro";
         class="text-lg md:text-xl text-gray-700 max-w-xl mb-8 leading-relaxed mx-auto md:mx-0"
       >
         En <span class="font-semibold text-blue-600">Zentrix Innovate</span>
-        creamos sitios web rápidos, apps móviles intuitivas y herramientas digitales
-        a medida para que tu marca crezca, atraiga más clientes y se diferencie de
-        la competencia.
+        creamos sitios web rápidos, apps móviles intuitivas y herramientas
+        digitales a medida para que tu marca crezca, atraiga más clientes y se
+        diferencie de la competencia.
       </p>
 
       <!-- Botones -->
@@ -28,20 +28,20 @@ import Layout from "../layouts/Layout.astro";
         class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
       >
         <a
-          href="/contact"
+          href="/services"
           class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 hover:scale-105 transition"
         >
-          Comienza tu proyecto
+          Explora nuestros servicios
         </a>
         <a
-          href="/portfolio"
+          href="/portafolio"
           class="px-8 py-4 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 hover:scale-105 transition"
         >
-          Ver portafolio
+          Ver proyectos
         </a>
       </div>
       <!-- Microtexto -->
-      <p class="text-sm text-gray-500 mt-3">Respuesta en menos de 24 horas</p>
+      <p class="text-sm text-gray-500 mt-3">Innovación con respuesta en menos de 24 horas</p>
     </div>
 
     <!-- Imagen -->
@@ -59,7 +59,7 @@ import Layout from "../layouts/Layout.astro";
     class="min-h-screen flex items-center bg-gradient-to-b from-gray-50 to-gray-100 px-6"
   >
     <div class="w-full">
-      <div class="max-w-6xl mx-auto text-center mb-16">
+      <div class="max-w-6xl mx-auto text-center mb-4">
         <span
           class="text-sm font-semibold tracking-wider text-blue-600 uppercase"
         >
@@ -74,7 +74,7 @@ import Layout from "../layouts/Layout.astro";
           Diseñamos soluciones digitales modernas, rápidas y enfocadas en
           resultados. Explora más en nuestra
           <a
-            href="/servicios"
+            href="/services"
             class="text-blue-600 font-semibold hover:underline"
             >página de servicios</a
           >
@@ -103,11 +103,17 @@ import Layout from "../layouts/Layout.astro";
           >
             SEO • Performance • UX
           </span>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-600 leading-relaxed mb-4">
             Sitios modernos y optimizados para
             <span class="font-semibold">atraer clientes</span> y
             <span class="font-semibold">generar ventas</span>.
           </p>
+          <a
+            href="/services#web"
+            class="text-blue-600 font-semibold hover:underline"
+          >
+            Ver más →
+          </a>
         </div>
 
         <!-- Card 2 -->
@@ -129,11 +135,17 @@ import Layout from "../layouts/Layout.astro";
           >
             Android • iOS • Escalables
           </span>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-600 leading-relaxed mb-4">
             Soluciones nativas y multiplataforma con
             <span class="font-semibold">excelente experiencia de usuario</span>,
             listas para crecer contigo.
           </p>
+          <a
+            href="/services#apps"
+            class="text-green-600 font-semibold hover:underline"
+          >
+            Ver más →
+          </a>
         </div>
 
         <!-- Card 3 -->
@@ -157,14 +169,58 @@ import Layout from "../layouts/Layout.astro";
           >
             Fácil de usar • Seguro
           </span>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-600 leading-relaxed mb-4">
             Plataformas administrables, seguras y con diseño profesional para
             que gestiones tu negocio sin complicaciones.
           </p>
+          <a
+            href="/services#cms"
+            class="text-purple-600 font-semibold hover:underline"
+          >
+            Ver más →
+          </a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Confianza / Clientes -->
+  <!-- <section class="py-20 bg-white px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-xl font-bold text-gray-800 mb-8">
+        Empresas que confían en nosotros
+      </h3>
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center"
+      >
+        <img
+          src="/logo1.png"
+          alt="Cliente 1"
+          class="h-12 mx-auto opacity-70 hover:opacity-100 transition"
+        />
+        <img
+          src="/logo2.png"
+          alt="Cliente 2"
+          class="h-12 mx-auto opacity-70 hover:opacity-100 transition"
+        />
+        <img
+          src="/logo3.png"
+          alt="Cliente 3"
+          class="h-12 mx-auto opacity-70 hover:opacity-100 transition"
+        />
+        <img
+          src="/logo4.png"
+          alt="Cliente 4"
+          class="h-12 mx-auto opacity-70 hover:opacity-100 transition"
+        />
+        <img
+          src="/logo5.png"
+          alt="Cliente 5"
+          class="h-12 mx-auto opacity-70 hover:opacity-100 transition"
+        />
+      </div>
+    </div>
+  </section> -->
 
   <!-- CTA Final -->
   <section
@@ -177,14 +233,15 @@ import Layout from "../layouts/Layout.astro";
         ¿Listo para impulsar tu negocio con tecnología de alto nivel?
       </h2>
       <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-        Agenda una asesoría gratuita y recibe un plan <span
-          class="font-semibold text-blue-700"
-          >personalizado en menos de 24 horas</span
-        >. Sin compromiso, diseñado para hacer crecer tu marca.
+        Agenda una asesoría gratuita y recibe un plan
+        <span class="font-semibold text-blue-700">
+          personalizado en menos de 24 horas.
+        </span>
+         Sin compromiso, diseñado para hacer crecer tu marca.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="/contact"
+          href="/contacto"
           class="px-10 py-4 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 hover:scale-105 transition"
         >
           Agenda tu llamada gratis

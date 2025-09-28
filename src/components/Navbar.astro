@@ -21,16 +21,16 @@ const links = [
 
     <!-- Links + CTA (desktop) -->
     <div class="hidden md:flex items-center gap-20">
-      <ul class="flex gap-12">
+      <ul class="flex gap-8 font-medium text-gray-700">
         {
           links.map((link) => (
             <li
               class="hover:scale-115 
-            transition-all duration-200 ease-in-out"
+         transition-all duration-200 ease-in-out"
             >
               <a
                 href={link.href}
-                class="hover:text-blue-600 font-sans transition-colors"
+                class="hover:text-blue-600 text-lg"
               >
                 {link.name}
               </a>

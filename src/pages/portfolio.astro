@@ -3,161 +3,271 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <!-- Hero / Encabezado -->
+  <!-- Hero Portafolio -->
   <section
-    class="min-h-screen pt-28 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 bg-white text-gray-900"
-  >
-    <!-- Texto -->
-    <div class="flex-1 text-center md:text-left md:pl-12">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-blue-600">
-        Nuestros Proyectos Destacados
-      </h1>
-      <p class="text-lg md:text-xl text-gray-700 mb-6 max-w-lg mx-auto md:mx-0">
-        Explora algunos de los proyectos que hemos desarrollado. Este template
-        te permite mostrar tu portafolio de manera profesional y clara.
-      </p>
-    </div>
+  class="relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 md:px-16 bg-gradient-to-r from-indigo-50 via-white to-blue-50 text-gray-900 overflow-hidden"
+>
+  <!-- Fondo decorativo animado -->
+  <div
+    aria-hidden="true"
+    class="absolute -left-32 -top-24 w-96 h-96 bg-gradient-to-r from-blue-200 to-indigo-300 opacity-20 rounded-full filter blur-3xl animate-pulse"
+  ></div>
+  <div
+    aria-hidden="true"
+    class="absolute -right-28 -bottom-20 w-80 h-80 bg-gradient-to-r from-pink-200 to-yellow-200 opacity-20 rounded-full filter blur-2xl animate-[spin_20s_linear_infinite]"
+  ></div>
 
-    <!-- Imagen / Ilustración -->
-    <div class="flex-1 flex justify-center mt-8 md:mt-0">
-      <div
-        class="w-full max-w-md h-64 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-300 shadow-lg"
+  <!-- Texto -->
+  <div
+    class="flex-1 text-center md:text-left md:pl-12 relative z-10"
+    data-aos="fade-right"
+    data-aos-duration="1000"
+  >
+    <h1
+      class="text-4xl md:text-6xl font-bold mb-6 text-blue-700 leading-tight"
+      data-aos="fade-right"
+      data-aos-delay="100"
+    >
+      Proyectos Destacados
+    </h1>
+    <p
+      class="text-lg md:text-xl text-gray-700 mb-6 max-w-lg mx-auto md:mx-0"
+      data-aos="fade-right"
+      data-aos-delay="200"
+    >
+      Un vistazo a las creaciones más representativas que hemos desarrollado
+      en <span class="font-semibold text-blue-600">Zentrix Innovate</span>.
+      Este es nuestro escaparate, pero lo mejor está en el
+      <span class="italic">Laboratorio de Proyectos</span>.
+    </p>
+    <a
+      href="/laboratorio"
+      class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 hover:scale-105 transition"
+      data-aos="zoom-in"
+      data-aos-delay="400"
+    >
+      Visitar Laboratorio Completo →
+    </a>
+  </div>
+
+  <!-- Imagen / Mockup -->
+  <div
+    class="flex-1 flex justify-center mt-8 md:mt-0 relative z-10"
+    data-aos="fade-up"
+    data-aos-duration="1200"
+  >
+    <div
+      class="w-full max-w-md h-72 bg-gray-100 rounded-2xl flex items-center justify-center border border-gray-300 shadow-lg hover:scale-[1.02] transition"
+    >
+      <span
+        class="text-gray-500 font-semibold text-center px-4"
+        data-aos="fade-up"
+        data-aos-delay="300"
       >
-        <span class="text-gray-500 font-semibold text-center px-4"
-          >Imagen / Mockup Aquí</span
-        >
-      </div>
+        Mockup Portafolio / Collage Proyectos
+      </span>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Grid de Proyectos -->
-  <section class="min-h-screen bg-gray-50 px-6 py-16">
-    <div class="max-w-6xl mx-auto text-center mb-12">
+  <section class="bg-gray-50 px-6 py-24 relative">
+    <div class="max-w-6xl mx-auto text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
-        Proyectos Recientes
+        Una selección de nuestro trabajo
       </h2>
-      <p class="text-gray-700 text-lg md:text-xl">
-        Cada proyecto muestra cómo nuestro enfoque ayuda a clientes a alcanzar
-        sus objetivos.
+      <p class="text-gray-600 text-lg md:text-xl">
+        Aquí reunimos algunos de los proyectos que mejor representan nuestro
+        enfoque en <span class="font-semibold">CMS, Apps y Desarrollo Web</span
+        >.
       </p>
     </div>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
     >
-      <!-- Proyecto 1 -->
+      <!-- Proyecto App 1 -->
       <div
-        class="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden"
+        class="group bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition"
+        data-aos="fade-up"
       >
-        <div class="h-48 bg-gray-100 flex items-center justify-center">
-          <span class="text-gray-500">Imagen Proyecto</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Proyecto 1</h3>
-          <p class="text-gray-600 mb-3">
-            Descripción breve del proyecto, sus objetivos y resultados.
-          </p>
-          <span
-            class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
-            >Categoría</span
+        <div class="relative h-52 bg-gray-100 flex items-center justify-center">
+          <span class="text-gray-400">Vista previa</span>
+          <div
+            class="absolute inset-0 bg-green-600/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
           >
-        </div>
-      </div>
-
-      <!-- Proyecto 2 -->
-      <div
-        class="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden"
-      >
-        <div class="h-48 bg-gray-100 flex items-center justify-center">
-          <span class="text-gray-500">Imagen Proyecto</span>
+            <a href="#" class="text-white font-semibold underline"
+              >Ver proyecto</a
+            >
+          </div>
         </div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Proyecto 2</h3>
+          <h3 class="text-xl font-semibold mb-2">Gestor de Tareas</h3>
           <p class="text-gray-600 mb-3">
-            Descripción breve del proyecto, sus objetivos y resultados.
+            Plataforma ligera para organizar pendientes y gestionar actividades
+            con categorías personalizadas.
           </p>
           <span
             class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm"
-            >Categoría</span
+            >App</span
           >
         </div>
       </div>
 
-      <!-- Proyecto 3 -->
+      <!-- Proyecto App 2 -->
       <div
-        class="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden"
+        class="group bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition"
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
-        <div class="h-48 bg-gray-100 flex items-center justify-center">
-          <span class="text-gray-500">Imagen Proyecto</span>
+        <div class="relative h-52 bg-gray-100 flex items-center justify-center">
+          <span class="text-gray-400">Vista previa</span>
+          <div
+            class="absolute inset-0 bg-green-600/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+          >
+            <a href="#" class="text-white font-semibold underline"
+              >Ver proyecto</a
+            >
+          </div>
         </div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Proyecto 3</h3>
+          <h3 class="text-xl font-semibold mb-2">Agenda de Citas</h3>
           <p class="text-gray-600 mb-3">
-            Descripción breve del proyecto, sus objetivos y resultados.
+            Aplicación intuitiva para gestionar citas y horarios de manera
+            eficiente.
+          </p>
+          <span
+            class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm"
+            >App</span
+          >
+        </div>
+      </div>
+
+      <!-- Proyecto Web 1 -->
+      <div
+        class="group bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition"
+        data-aos="fade-up"
+      >
+        <div class="relative h-52 bg-gray-100 flex items-center justify-center">
+          <span class="text-gray-400">Vista previa</span>
+          <div
+            class="absolute inset-0 bg-indigo-600/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+          >
+            <a href="#" class="text-white font-semibold underline"
+              >Ver proyecto</a
+            >
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Biblioteca Virtual</h3>
+          <p class="text-gray-600 mb-3">
+            Catálogo digital con herramientas de búsqueda y filtrado para
+            explorar recursos de forma ágil.
+          </p>
+          <span
+            class="inline-block px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm"
+            >Web</span
+          >
+        </div>
+      </div>
+
+      <!-- Proyecto Web 2 -->
+      <div
+        class="group bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="relative h-52 bg-gray-100 flex items-center justify-center">
+          <span class="text-gray-400">Vista previa</span>
+          <div
+            class="absolute inset-0 bg-indigo-600/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+          >
+            <a href="#" class="text-white font-semibold underline"
+              >Ver proyecto</a
+            >
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Inventario Básico</h3>
+          <p class="text-gray-600 mb-3">
+            Sistema de control de stock con indicadores visuales para supervisar
+            niveles de producto.
+          </p>
+          <span
+            class="inline-block px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm"
+            >Web</span
+          >
+        </div>
+      </div>
+
+      <!-- Proyecto Dashboard 1 -->
+      <div
+        class="group bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition"
+        data-aos="fade-up"
+      >
+        <div class="relative h-52 bg-gray-100 flex items-center justify-center">
+          <span class="text-gray-400">Vista previa</span>
+          <div
+            class="absolute inset-0 bg-purple-600/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+          >
+            <a href="#" class="text-white font-semibold underline"
+              >Ver proyecto</a
+            >
+          </div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Dashboard de Ventas</h3>
+          <p class="text-gray-600 mb-3">
+            Panel con métricas clave y visualizaciones gráficas para seguimiento
+            de ingresos y clientes.
           </p>
           <span
             class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm"
-            >Categoría</span
+            >Dashboard</span
           >
         </div>
       </div>
 
-      <!-- Proyecto 4 -->
+      <!-- Proyecto Dashboard 2 -->
       <div
-        class="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden"
+        class="group bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl transition"
+        data-aos="fade-up"
+        data-aos-delay="100"
       >
-        <div class="h-48 bg-gray-100 flex items-center justify-center">
-          <span class="text-gray-500">Imagen Proyecto</span>
+        <div class="relative h-52 bg-gray-100 flex items-center justify-center">
+          <span class="text-gray-400">Vista previa</span>
+          <div
+            class="absolute inset-0 bg-purple-600/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+          >
+            <a href="#" class="text-white font-semibold underline"
+              >Ver proyecto</a
+            >
+          </div>
         </div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Proyecto 4</h3>
+          <h3 class="text-xl font-semibold mb-2">Dashboard de Proyectos</h3>
           <p class="text-gray-600 mb-3">
-            Descripción breve del proyecto, sus objetivos y resultados.
+            Espacio centralizado para supervisar proyectos activos, completados
+            y en planificación.
           </p>
           <span
-            class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm"
-            >Categoría</span
+            class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm"
+            >Dashboard</span
           >
         </div>
       </div>
+    </div>
 
-      <!-- Proyecto 5 -->
-      <div
-        class="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden"
+    <!-- CTA Final -->
+    <div class="text-center mt-16">
+      <a
+        href="/laboratorio"
+        class="px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg shadow hover:bg-blue-800 hover:scale-105 transition"
+        data-aos="zoom-in"
       >
-        <div class="h-48 bg-gray-100 flex items-center justify-center">
-          <span class="text-gray-500">Imagen Proyecto</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Proyecto 5</h3>
-          <p class="text-gray-600 mb-3">
-            Descripción breve del proyecto, sus objetivos y resultados.
-          </p>
-          <span
-            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm"
-            >Categoría</span
-          >
-        </div>
-      </div>
-
-      <!-- Proyecto 6 -->
-      <div
-        class="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden"
-      >
-        <div class="h-48 bg-gray-100 flex items-center justify-center">
-          <span class="text-gray-500">Imagen Proyecto</span>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Proyecto 6</h3>
-          <p class="text-gray-600 mb-3">
-            Descripción breve del proyecto, sus objetivos y resultados.
-          </p>
-          <span
-            class="inline-block px-3 py-1 bg-teal-100 text-teal-600 rounded-full text-sm"
-            >Categoría</span
-          >
-        </div>
-      </div>
+        Explorar todos los proyectos en el Laboratorio →
+      </a>
     </div>
   </section>
 </Layout>

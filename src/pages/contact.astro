@@ -1,0 +1,111 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 bg-gradient-to-r from-blue-50 via-white to-indigo-50 overflow-hidden relative">
+    <!-- Fondo decorativo -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#3b82f620,_transparent_50%)]"></div>
+
+    <!-- Columna de texto -->
+    <div 
+      class="flex-1 text-center md:text-left mb-10 md:mb-0 relative z-10"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    >
+      <h1 class="text-4xl md:text-5xl font-bold text-blue-700 leading-snug mb-6">
+        Conversemos sobre tu proyecto
+      </h1>
+      <p class="text-lg text-gray-700 max-w-md mx-auto md:mx-0 mb-8">
+        Completa el formulario y recibe una propuesta personalizada en menos de 
+        <span class="font-semibold text-blue-600">24 horas</span>.  
+        ¡Estamos listos para ayudarte a crecer!
+      </p>
+
+      <ul class="space-y-4 text-gray-600">
+        <li class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="100">
+          <i data-lucide="clock" class="w-6 h-6 text-blue-600"></i>
+          Respuesta en menos de 24h
+        </li>
+        <li class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="200">
+          <i data-lucide="shield-check" class="w-6 h-6 text-blue-600"></i>
+          Soporte y acompañamiento real
+        </li>
+        <li class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="300">
+          <i data-lucide="zap" class="w-6 h-6 text-blue-600"></i>
+          Más de 50 proyectos entregados
+        </li>
+      </ul>
+    </div>
+
+    <!-- Columna del formulario -->
+    <div 
+      class="flex-1 relative z-10 w-full max-w-lg p-8 rounded-3xl shadow-xl border border-white/40 bg-white/60 backdrop-blur-xl"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+    >
+      <form id="contact-form" class="space-y-6">
+        <!-- Nombre -->
+        <div class="relative">
+          <i data-lucide="user" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 peer-focus:text-blue-600 transition"></i>
+          <input
+            type="text"
+            name="nombre"
+            required
+            placeholder="Tu nombre"
+            class="peer w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition bg-white/80"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="relative">
+          <i data-lucide="mail" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 peer-focus:text-blue-600 transition"></i>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Tu correo"
+            class="peer w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition bg-white/80"
+          />
+        </div>
+
+        <!-- Mensaje -->
+        <div class="relative">
+          <i data-lucide="message-circle" class="absolute left-3 top-5 w-5 h-5 text-gray-400 peer-focus:text-blue-600 transition"></i>
+          <textarea
+            name="mensaje"
+            rows="4"
+            required
+            placeholder="Cuéntanos sobre tu proyecto..."
+            class="peer w-full pl-10 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition bg-white/80"
+          ></textarea>
+        </div>
+
+        <!-- Botón -->
+        <button
+          type="submit"
+          id="submit-btn"
+          class="group w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg relative overflow-hidden transition hover:scale-[1.02]"
+        >
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-5 h-5"></i> Enviar mensaje
+          </span>
+          <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition"></span>
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script>
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    const btn = document.getElementById("submit-btn") as HTMLButtonElement;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      btn.disabled = true;
+      btn.innerHTML = "Enviando...";
+    });
+  </script>
+</Layout>
